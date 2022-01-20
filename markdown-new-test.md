@@ -12,4 +12,4 @@
 
 # case3
 
-[eeeez]peasy.html)
+[eeeez](peasy.html
