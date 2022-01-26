@@ -31,7 +31,10 @@ public class MarkdownParse {
             if(closeParen == -1) {
                 closeParen = markdown.indexOf("\n", openParen);
             }
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            String linkToAdd = markdown.substring(openParen + 1, closeParen);
+            if(linkToAdd.indexOf(".") != -1) {
+                toReturn.add(linkToAdd);
+            }
             // System.out.println("NOB: " + nextOpenBracket + " NCB: " + nextCloseBracket + " OP: " + openParen + " CP: " + closeParen);
             currentIndex = closeParen + 1;
         }
