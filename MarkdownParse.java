@@ -30,6 +30,7 @@ public class MarkdownParse {
             stopCharacters.add('[');
             stopCharacters.add(']');
             stopCharacters.add('\n');
+            stopCharacters.add(' ');
             while(startIndex >= 0) {
                 if(stopCharacters.contains(markdown.charAt(startIndex))) {
                     startIndex++;
@@ -43,6 +44,9 @@ public class MarkdownParse {
                     break;
                 }
                 endIndex++;
+            }
+            if(endIndex == markdown.length()) {
+                endIndex--;
             }
             toReturn.add(markdown.substring(startIndex, endIndex + 1));
         }
