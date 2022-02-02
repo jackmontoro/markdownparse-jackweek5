@@ -46,7 +46,6 @@ public class MarkdownParse {
             }
             toReturn.add(markdown.substring(startIndex, endIndex + 1));
         }
-        toReturn.add("breaking code");
         return toReturn;
     }
     public static void main(String[] args) throws IOException {
